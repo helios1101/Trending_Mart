@@ -1,0 +1,1076 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- The above 4 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+
+    <!-- Title  -->
+    <title>Amado - Furniture Ecommerce Template | Shop</title>
+
+    <!-- Favicon  -->
+    <link rel="icon" href="img/core-img/favicon.ico">
+
+    <!-- Core Style CSS -->
+    <link rel="stylesheet" href="css/core-style.css">
+    <link rel="stylesheet" href="style.css">
+
+
+    <style>
+        .grab {
+            cursor: -webkit-grab;
+            cursor: grab;
+            animation: linear(0.075, 0.82, 0.165, 1);
+            font-family: sans-serif;
+        }
+
+        .grab:hover {
+            border: 1px solid black;
+            background-color: #f8fa79;
+            box-shadow: 1px 2px;
+            transform: scale(1.1);
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Search Wrapper Area Start -->
+    <div class="search-wrapper section-padding-100">
+        <div class="search-close">
+            <i class="fa fa-close" aria-hidden="true"></i>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="search-content">
+                        <form action="#" method="get">
+                            <input type="search" name="search" id="search" placeholder="Type your keyword...">
+                            <button type="submit">
+                                <img src="img/core-img/search.png" alt="">
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Search Wrapper Area End -->
+
+    <!-- ##### Main Content Wrapper Start ##### -->
+    <div class="main-content-wrapper d-flex clearfix">
+
+        <!-- Mobile Nav (max width 767px)-->
+        <div class="mobile-nav">
+            <!-- Navbar Brand -->
+            <div class="amado-navbar-brand">
+                <a href="index.html">
+                    <img src="img/core-img/logo.png" alt="">
+                </a>
+            </div>
+            <!-- Navbar Toggler -->
+            <div class="amado-navbar-toggler">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+
+        <!-- Header Area Start -->
+        <header class="header-area clearfix">
+            <!-- Close Icon -->
+            <div class="nav-close">
+                <i class="fa fa-close" aria-hidden="true"></i>
+            </div>
+            <!-- Logo -->
+            <div class="logo">
+                <a href="index.html">
+                    <img src="img/core-img/logo.png" alt="">
+                </a>
+            </div>
+            <!-- Amado Nav -->
+            <nav class="amado-nav">
+                <ul>
+                    <li>
+                        <a href="index.html">Home</a>
+                    </li>
+                    <li class="active">
+                        <a href="shop.html">Shop</a>
+                    </li>
+                    <!-- <li>
+                        <a href="product-details.html">Product</a>
+                    </li> -->
+                    <li>
+                        <a href="cart.html">Cart</a>
+                    </li>
+                    <li>
+                        <a href="checkout.html">Checkout</a>
+                    </li>
+                </ul>
+            </nav>
+            <!-- Button Group -->
+            <div class="amado-btn-group mt-30 mb-100">
+                <a href="#" class="btn amado-btn mb-15">%Discount%</a>
+                <a href="#" class="btn amado-btn active">New this week</a>
+            </div>
+            <!-- Cart Menu -->
+            <div class="cart-fav-search mb-100">
+                <a href="cart.html" class="cart-nav">
+                    <img src="img/core-img/cart.png" alt=""> Cart (
+                    <span id="cart">0</span>)
+                </a>
+                <a href="#" class="fav-nav">
+                    <img src="img/core-img/favorites.png" alt=""> Favourite</a>
+                <a href="#" class="search-nav">
+                    <img src="img/core-img/search.png" alt=""> Search</a>
+            </div>
+            <!-- Social Button -->
+            <div class="social-info d-flex justify-content-between">
+                <a href="#">
+                    <i class="fa fa-pinterest" aria-hidden="true"></i>
+                </a>
+                <a href="#">
+                    <i class="fa fa-instagram" aria-hidden="true"></i>
+                </a>
+                <a href="#">
+                    <i class="fa fa-facebook" aria-hidden="true"></i>
+                </a>
+                <a href="#">
+                    <i class="fa fa-twitter" aria-hidden="true"></i>
+                </a>
+            </div>
+        </header>
+        <!-- Header Area End -->
+
+        <div class="shop_sidebar_area">
+
+            <!-- ##### Single Widget ##### -->
+            <div class="widget catagory mb-50">
+                <!-- Widget Title -->
+                <h6 class="widget-title mb-30">Catagories</h6>
+
+                <!--  Catagories  -->
+                <div class="catagories-menu">
+                    <ul>
+                        <li class="active">
+                            <a id="cndlfrg" class="grab" value="click" onclick="funccndlfrg();incr(1);">Candle Fragrances</a>
+                        </li>
+                        <script>
+                            function funccndlfrg() {
+                                // incr(   );
+                                // document.getElementById("cndlfrgimg").src = "https://rukminim1.flixcart.com/image/800/800/j7rxpjk0/candle-tealight-holder/g/t/z/acs500-ecraftindia-original-imaexwfcgytwsmug.jpeg?q=90";
+                                var o;
+                                function reqListener() {
+                                    o = JSON.parse(this.responseText);
+                                    console.log(o);
+                                    let arr1 = o[0].imageUrlStr.split(";");  // 0 & 2 
+                                    let arr1h = o[2].imageUrlStr.split(";"); //2 & 0
+                                    let arr2 = o[1].imageUrlStr.split(";");//1&12
+                                    let arr2h = o[12].imageUrlStr.split(";");//12&1
+                                    let arr3 = o[50].imageUrlStr.split(";");//48 & 50
+                                    let arr3h = o[48].imageUrlStr.split(";");//50 & 48
+                                    let arr4 = o[65].imageUrlStr.split(";"); //65 & 78
+                                    let arr4h = o[78].imageUrlStr.split(";"); //78 & 65
+                                    let arr5 = o[31].imageUrlStr.split(";"); // 31 & 33 
+                                    let arr5h = o[33].imageUrlStr.split(";"); //33 & 31
+                                    let arr6 = o[10].imageUrlStr.split(";"); // 10 & 28
+                                    let arr6h = o[28].imageUrlStr.split(";"); //28 & 10
+                                    document.getElementById("cndlfrgimg1").src = arr1[2];
+                                    document.getElementById("cndlfrgimg1h").src = arr1h[2];
+                                    document.getElementById("cndlfrgimg2").src = arr2[2];
+                                    document.getElementById("cndlfrgimg2h").src = arr2h[2];
+                                    document.getElementById("cndlfrgimg3").src = arr3[2];
+                                    document.getElementById("cndlfrgimg3h").src = arr3h[2];
+                                    document.getElementById("cndlfrgimg4").src = arr4[2];
+                                    document.getElementById("cndlfrgimg4h").src = arr4h[2];
+                                    document.getElementById("cndlfrgimg5").src = arr5[2];
+                                    document.getElementById("cndlfrgimg5h").src = arr5h[2];
+                                    document.getElementById("cndlfrgimg6").src = arr6[2];
+                                    document.getElementById("cndlfrgimg6h").src = arr6h[2];
+                                    document.getElementById("cndlfrgprice1").innerHTML = o[0].sellingPrice;
+                                    document.getElementById("cndlfrgprice2").innerHTML = o[1].sellingPrice;
+                                    document.getElementById("cndlfrgprice3").innerHTML = o[50].sellingPrice;
+                                    document.getElementById("cndlfrgprice4").innerHTML = o[65].sellingPrice;
+                                    document.getElementById("cndlfrgprice5").innerHTML = o[31].sellingPrice;
+                                    document.getElementById("cndlfrgprice6").innerHTML = o[10].sellingPrice;
+                                    document.getElementById("cndlfrgtit1").innerHTML = o[0].title;
+                                    document.getElementById("cndlfrgtit2").innerHTML = o[1].title;
+                                    document.getElementById("cndlfrgtit3").innerHTML = o[50].title;
+                                    document.getElementById("cndlfrgtit4").innerHTML = o[65].title;
+                                    document.getElementById("cndlfrgtit5").innerHTML = o[31].title;
+                                    document.getElementById("cndlfrgtit6").innerHTML = o[10].title;
+                                }
+
+                                var oReq = new XMLHttpRequest();
+                                oReq.addEventListener("load", reqListener);
+                                oReq.open("GET", "http://101.53.137.41/api/?cat=HomeDecor_Candles-Fragrances_Candles-Holders_CandleHolders&count=100&offset=0;");
+                                oReq.send();
+
+                            }
+                        </script>
+
+
+                        <li class="active">
+                            <a id="clkwall" onclick="funcclkwall();incr(2);" class="grab">Clock Wall Decors</a>
+                        </li>
+                        <script>
+                            function funcclkwall() {
+                                var p;
+                                function reqListener1() {
+                                    p = JSON.parse(this.responseText);
+                                    console.log(p);
+                                    let arr1 = p[99].imageUrlStr.split(";");  // 99 & 98 
+                                    let arr1h = p[98].imageUrlStr.split(";"); // 98 & 99
+                                    let arr2 = p[67].imageUrlStr.split(";");// 67 & 12
+                                    let arr2h = p[12].imageUrlStr.split(";");// 12 & 67
+                                    let arr3 = p[58].imageUrlStr.split(";");//58 & 83
+                                    let arr3h = p[83].imageUrlStr.split(";");// 83 & 58
+                                    let arr4 = p[65].imageUrlStr.split(";"); //65 & 78
+                                    let arr4h = p[78].imageUrlStr.split(";"); //78 & 65
+                                    let arr5 = p[39].imageUrlStr.split(";"); // 39 & 63 
+                                    let arr5h = p[63].imageUrlStr.split(";"); //63 & 39
+                                    let arr6 = p[64].imageUrlStr.split(";"); // 64 & 17
+                                    let arr6h = p[17].imageUrlStr.split(";"); // 17 & 64
+                                    document.getElementById("cndlfrgimg1").src = arr1[2];
+                                    document.getElementById("cndlfrgimg1h").src = arr1h[2];
+                                    document.getElementById("cndlfrgimg2").src = arr2[2];
+                                    document.getElementById("cndlfrgimg2h").src = arr2h[2];
+                                    document.getElementById("cndlfrgimg3").src = arr3[2];
+                                    document.getElementById("cndlfrgimg3h").src = arr3h[2];
+                                    document.getElementById("cndlfrgimg4").src = arr4[2];
+                                    document.getElementById("cndlfrgimg4h").src = arr4h[2];
+                                    document.getElementById("cndlfrgimg5").src = arr5[2];
+                                    document.getElementById("cndlfrgimg5h").src = arr5h[2];
+                                    document.getElementById("cndlfrgimg6").src = arr6[2];
+                                    document.getElementById("cndlfrgimg6h").src = arr6h[2];
+                                    document.getElementById("cndlfrgprice1").innerHTML = p[99].sellingPrice;
+                                    document.getElementById("cndlfrgprice2").innerHTML = p[67].sellingPrice;
+                                    document.getElementById("cndlfrgprice3").innerHTML = p[58].sellingPrice;
+                                    document.getElementById("cndlfrgprice4").innerHTML = p[65].sellingPrice;
+                                    document.getElementById("cndlfrgprice5").innerHTML = p[39].sellingPrice;
+                                    document.getElementById("cndlfrgprice6").innerHTML = p[64].sellingPrice;
+                                    document.getElementById("cndlfrgtit1").innerHTML = p[99].title;
+                                    document.getElementById("cndlfrgtit2").innerHTML = p[67].title;
+                                    document.getElementById("cndlfrgtit3").innerHTML = p[58].title;
+                                    document.getElementById("cndlfrgtit4").innerHTML = p[65].title;
+                                    document.getElementById("cndlfrgtit5").innerHTML = p[39].title;
+                                    document.getElementById("cndlfrgtit6").innerHTML = p[64].title;
+
+
+
+                                }
+
+                                var oReq = new XMLHttpRequest();
+                                oReq.addEventListener("load", reqListener1);
+                                oReq.open("GET", "http://101.53.137.41/api/?cat=HomeDecor_Clocks-WallDecor_Clocks_WallClocks&count=100&offset=0;");
+                                oReq.send();
+
+                            }
+
+                        </script>
+
+                        <li class="active">
+                            <a id="cndlfrg" onclick="funcflowervase();incr(3);" class="grab">Flower Vases</a>
+                        </li>
+                        <script>
+                            function funcflowervase() {
+                                var q;
+                                function reqListener2() {
+                                    q = JSON.parse(this.responseText);
+                                    console.log(q);
+                                    let arr1 = q[53].imageUrlStr.split(";");  // 53 & 8 
+                                    let arr1h = q[8].imageUrlStr.split(";"); // 8 & 53
+                                    let arr2 = q[49].imageUrlStr.split(";");// 49 & 51
+                                    let arr2h = q[51].imageUrlStr.split(";");// 51 & 49
+                                    let arr3 = q[83].imageUrlStr.split(";");//83 & 78
+                                    let arr3h = q[78].imageUrlStr.split(";");// 78 & 83
+                                    let arr4 = q[22].imageUrlStr.split(";"); //22 & 73
+                                    let arr4h = q[73].imageUrlStr.split(";"); //73 & 22
+                                    let arr5 = q[39].imageUrlStr.split(";"); // 39 & 63 
+                                    let arr5h = q[63].imageUrlStr.split(";"); //63 & 39
+                                    let arr6 = q[82].imageUrlStr.split(";"); // 82 & 84
+                                    let arr6h = q[84].imageUrlStr.split(";"); // 82 & 84
+                                    document.getElementById("cndlfrgimg1").src = arr1[2];
+                                    document.getElementById("cndlfrgimg1h").src = arr1h[2];
+                                    document.getElementById("cndlfrgimg2").src = arr2[2];
+                                    document.getElementById("cndlfrgimg2h").src = arr2h[2];
+                                    document.getElementById("cndlfrgimg3").src = arr3[2];
+                                    document.getElementById("cndlfrgimg3h").src = arr3h[2];
+                                    document.getElementById("cndlfrgimg4").src = arr4[2];
+                                    document.getElementById("cndlfrgimg4h").src = arr4h[2];
+                                    document.getElementById("cndlfrgimg5").src = arr5[2];
+                                    document.getElementById("cndlfrgimg5h").src = arr5h[2];
+                                    document.getElementById("cndlfrgimg6").src = arr6[2];
+                                    document.getElementById("cndlfrgimg6h").src = arr6h[2];
+                                    document.getElementById("cndlfrgprice1").innerHTML = q[53].sellingPrice;
+                                    document.getElementById("cndlfrgprice2").innerHTML = q[49].sellingPrice;
+                                    document.getElementById("cndlfrgprice3").innerHTML = q[83].sellingPrice;
+                                    document.getElementById("cndlfrgprice4").innerHTML = q[22].sellingPrice;
+                                    document.getElementById("cndlfrgprice5").innerHTML = q[39].sellingPrice;
+                                    document.getElementById("cndlfrgprice6").innerHTML = q[82].sellingPrice;
+                                    document.getElementById("cndlfrgtit1").innerHTML = q[53].title;
+                                    document.getElementById("cndlfrgtit2").innerHTML = q[49].title;
+                                    document.getElementById("cndlfrgtit3").innerHTML = q[83].title;
+                                    document.getElementById("cndlfrgtit4").innerHTML = q[22].title;
+                                    document.getElementById("cndlfrgtit5").innerHTML = q[39].title;
+                                    document.getElementById("cndlfrgtit6").innerHTML = q[82].title;
+                                }
+
+                                var oReq = new XMLHttpRequest();
+                                oReq.addEventListener("load", reqListener2);
+                                oReq.open("GET", "http://101.53.137.41/api/?cat=HomeDecor_Flowers-Vases_VaseFillers&count=100&offset=0;");
+                                oReq.send();
+
+                            }
+
+                        </script>
+                        <li class="active">
+                            <a id="gardendec" onclick="funcgardendec();incr(4);" class="grab">Garden Decors</a>
+                        </li>
+                        <script>
+                            function funcgardendec() {
+                                var r;
+                                function reqListener3() {
+                                    r = JSON.parse(this.responseText);
+                                    console.log(r);
+                                    let arr1 = r[14].imageUrlStr.split(";");  // 14 & 8
+                                    let arr1h = r[8].imageUrlStr.split(";"); // 8 & 14
+                                    let arr2 = r[6].imageUrlStr.split(";");// 6 & 13
+                                    let arr2h = r[13].imageUrlStr.split(";");// 13 & 6
+                                    let arr3 = r[91].imageUrlStr.split(";");// 91 & 72
+                                    let arr3h = r[72].imageUrlStr.split(";");// 72 & 91
+                                    let arr4 = r[43].imageUrlStr.split(";"); //43 & 40
+                                    let arr4h = r[40].imageUrlStr.split(";"); //40 & 43
+                                    let arr5 = r[39].imageUrlStr.split(";"); // 39 & 18 
+                                    let arr5h = r[18].imageUrlStr.split(";"); //18 & 39
+                                    let arr6 = r[65].imageUrlStr.split(";"); // 64 & 65
+                                    let arr6h = r[64].imageUrlStr.split(";"); // 65 & 64
+                                    document.getElementById("cndlfrgimg1").src = arr1[2];
+                                    document.getElementById("cndlfrgimg1h").src = arr1h[2];
+                                    document.getElementById("cndlfrgimg2").src = arr2[2];
+                                    document.getElementById("cndlfrgimg2h").src = arr2h[2];
+                                    document.getElementById("cndlfrgimg3").src = arr3[2];
+                                    document.getElementById("cndlfrgimg3h").src = arr3h[2];
+                                    document.getElementById("cndlfrgimg4").src = arr4[2];
+                                    document.getElementById("cndlfrgimg4h").src = arr4h[2];
+                                    document.getElementById("cndlfrgimg5").src = arr5[2];
+                                    document.getElementById("cndlfrgimg5h").src = arr5h[2];
+                                    document.getElementById("cndlfrgimg6").src = arr6[2];
+                                    document.getElementById("cndlfrgimg6h").src = arr6h[2];
+                                    document.getElementById("cndlfrgprice1").innerHTML = r[14].sellingPrice;
+                                    document.getElementById("cndlfrgprice2").innerHTML = r[6].sellingPrice;
+                                    document.getElementById("cndlfrgprice3").innerHTML = r[91].sellingPrice;
+                                    document.getElementById("cndlfrgprice4").innerHTML = r[43].sellingPrice;
+                                    document.getElementById("cndlfrgprice5").innerHTML = r[39].sellingPrice;
+                                    document.getElementById("cndlfrgprice6").innerHTML = r[65].sellingPrice;
+                                    document.getElementById("cndlfrgtit1").innerHTML = r[14].title;
+                                    document.getElementById("cndlfrgtit2").innerHTML = r[6].title;
+                                    document.getElementById("cndlfrgtit3").innerHTML = r[91].title;
+                                    document.getElementById("cndlfrgtit4").innerHTML = r[43].title;
+                                    document.getElementById("cndlfrgtit5").innerHTML = r[39].title;
+                                    document.getElementById("cndlfrgtit6").innerHTML = r[65].title;
+                                }
+
+                                var oReq = new XMLHttpRequest();
+                                oReq.addEventListener("load", reqListener3);
+                                oReq.open("GET", "http://101.53.137.41/api/?cat=HomeDecor_GardenDecor_Windchimes&count=100&offset=0;");
+                                oReq.send();
+
+                            }
+
+                        </script>
+                        <li class="active">
+                            <a id="homeuti" onclick="funchomeuti();incr(5);" class="grab">Home Utilities</a>
+                        </li>
+                        <script>
+                            function funchomeuti() {
+                                var s;
+                                function reqListener5() {
+                                    s = JSON.parse(this.responseText);
+                                    console.log(s);
+                                    let arr1 = s[14].imageUrlStr.split(";");
+                                    console.log(arr1);  // 14 & 8
+                                    let arr1h = s[8].imageUrlStr.split(";"); // 8 & 14
+                                    let arr2 = s[6].imageUrlStr.split(";");// 6 & 13
+                                    let arr2h = s[13].imageUrlStr.split(";");// 13 & 6
+                                    let arr3 = s[91].imageUrlStr.split(";");// 91 & 72
+                                    let arr3h = s[72].imageUrlStr.split(";");// 72 & 91
+                                    let arr4 = s[43].imageUrlStr.split(";"); //43 & 40
+                                    let arr4h = s[40].imageUrlStr.split(";"); //40 & 43
+                                    let arr5 = s[39].imageUrlStr.split(";"); // 39 & 18 
+                                    let arr5h = s[18].imageUrlStr.split(";"); //18 & 39
+                                    let arr6 = s[65].imageUrlStr.split(";"); // 64 & 65
+                                    let arr6h = s[64].imageUrlStr.split(";"); // 65 & 64
+                                    document.getElementById("cndlfrgimg1").src = arr1[2];
+                                    document.getElementById("cndlfrgimg1h").src = arr1h[2];
+                                    document.getElementById("cndlfrgimg2").src = arr2[2];
+                                    document.getElementById("cndlfrgimg2h").src = arr2h[2];
+                                    document.getElementById("cndlfrgimg3").src = arr3[2];
+                                    document.getElementById("cndlfrgimg3h").src = arr3h[2];
+                                    document.getElementById("cndlfrgimg4").src = arr4[2];
+                                    document.getElementById("cndlfrgimg4h").src = arr4h[2];
+                                    document.getElementById("cndlfrgimg5").src = arr5[2];
+                                    document.getElementById("cndlfrgimg5h").src = arr5h[2];
+                                    document.getElementById("cndlfrgimg6").src = arr6[2];
+                                    document.getElementById("cndlfrgimg6h").src = arr6h[2];
+                                }
+
+                                var oReq = new XMLHttpRequest();
+                                oReq.addEventListener("load", reqListener5);
+                                oReq.open("GET", "http://101.53.137.41/api/?cat=HomeDecor_HomeUtilities_BookEnds&count=100&offset=0;");
+                                oReq.send();
+
+                            }
+
+                        </script>
+                        <li class="active">
+                            <a id="lamplight" onclick="funclightlamp();incr(6);" class="grab">Light Lamps</a>
+                        </li>
+                        <script>
+                            function funclightlamp() {
+                                var t;
+                                function reqListener6() {
+                                    t = JSON.parse(this.responseText);
+                                    console.log(t);
+                                    let arr1 = t[98].imageUrlStr.split(";");  // 98 & 89
+                                    let arr1h = t[89].imageUrlStr.split(";"); // 89 & 98
+                                    let arr2 = t[29].imageUrlStr.split(";");// 29 & 27
+                                    let arr2h = t[27].imageUrlStr.split(";");// 27 & 29
+                                    let arr3 = t[6].imageUrlStr.split(";");// 6 & 7
+                                    let arr3h = t[7].imageUrlStr.split(";");// 7 & 6
+                                    let arr4 = t[43].imageUrlStr.split(";"); //43 & 72
+                                    let arr4h = t[72].imageUrlStr.split(";"); //72 & 43
+                                    let arr5 = t[18].imageUrlStr.split(";"); //  18 & 40 
+                                    let arr5h = t[40].imageUrlStr.split(";"); //40 & 18
+                                    let arr6 = t[65].imageUrlStr.split(";"); // 64 & 65
+                                    let arr6h = t[64].imageUrlStr.split(";"); // 65 & 64
+                                    document.getElementById("cndlfrgimg1").src = arr1[2];
+                                    document.getElementById("cndlfrgimg1h").src = arr1h[2];
+                                    document.getElementById("cndlfrgimg2").src = arr2[2];
+                                    document.getElementById("cndlfrgimg2h").src = arr2h[2];
+                                    document.getElementById("cndlfrgimg3").src = arr3[2];
+                                    document.getElementById("cndlfrgimg3h").src = arr3h[2];
+                                    document.getElementById("cndlfrgimg4").src = arr4[2];
+                                    document.getElementById("cndlfrgimg4h").src = arr4h[2];
+                                    document.getElementById("cndlfrgimg5").src = arr5[2];
+                                    document.getElementById("cndlfrgimg5h").src = arr5h[2];
+                                    document.getElementById("cndlfrgimg6").src = arr6[2];
+                                    document.getElementById("cndlfrgimg6h").src = arr6h[2];
+                                }
+
+                                var oReq = new XMLHttpRequest();
+                                oReq.addEventListener("load", reqListener6);
+                                oReq.open("GET", "http://101.53.137.41/api/?cat=HomeDecor_Lights-Lamps_WallLamps&count=100&offset=0;");
+                                oReq.send();
+
+                            }
+
+                        </script>
+
+                        <li class="active">
+                            <a id="festivedec" onclick="funcfestivedec();incr(7);" class="grab">Spiritual Festive Decors</a>
+                        </li>
+                        <script>
+                            function funcfestivedec() {
+                                var u;
+                                function reqListener7() {
+                                    u = JSON.parse(this.responseText);
+                                    console.log(u);
+                                    let arr1 = u[98].imageUrlStr.split(";");  // 98 & 89
+                                    let arr1h = u[89].imageUrlStr.split(";"); // 89 & 98
+                                    let arr2 = u[29].imageUrlStr.split(";");// 29 & 27
+                                    let arr2h = u[27].imageUrlStr.split(";");// 27 & 29
+                                    let arr3 = u[6].imageUrlStr.split(";");// 6 & 7
+                                    let arr3h = u[7].imageUrlStr.split(";");// 7 & 6
+                                    let arr4 = u[43].imageUrlStr.split(";"); //43 & 72
+                                    let arr4h = u[72].imageUrlStr.split(";"); //72 & 43
+                                    let arr5 = u[18].imageUrlStr.split(";"); //  18 & 40 
+                                    let arr5h = u[40].imageUrlStr.split(";"); //40 & 18
+                                    let arr6 = u[65].imageUrlStr.split(";"); // 64 & 65
+                                    let arr6h = u[64].imageUrlStr.split(";"); // 65 & 64
+                                    document.getElementById("cndlfrgimg1").src = arr1[2];
+
+                                    document.getElementById("cndlfrgimg1h").src = arr1h[2];
+                                    document.getElementById("cndlfrgimg2").src = arr2[2];
+                                    document.getElementById("cndlfrgimg2h").src = arr2h[2];
+                                    document.getElementById("cndlfrgimg3").src = arr3[2];
+                                    document.getElementById("cndlfrgimg3h").src = arr3h[2];
+                                    document.getElementById("cndlfrgimg4").src = arr4[2];
+                                    document.getElementById("cndlfrgimg4h").src = arr4h[2];
+                                    document.getElementById("cndlfrgimg5").src = arr5[2];
+                                    document.getElementById("cndlfrgimg5h").src = arr5h[2];
+                                    document.getElementById("cndlfrgimg6").src = arr6[2];
+                                    document.getElementById("cndlfrgimg6h").src = arr6h[2];
+                                }
+
+                                var oReq = new XMLHttpRequest();
+                                oReq.addEventListener("load", reqListener7);
+                                oReq.open("GET", "http://101.53.137.41/api/?cat=HomeDecor_Spiritual-FestiveDecor_SpiritualDecor_LordJhulas&count=100&offset=0;");
+                                oReq.send();
+
+                            }
+
+                        </script>
+                        <li class="active">
+                            <a id="tabledec" onclick="functabledec();incr(8);" class="grab">Table Decors</a>
+                        </li>
+                        <script>
+                            function functabledec() {
+                                var v;
+                                function reqListener8() {
+                                    v = JSON.parse(this.responseText);
+                                    console.log(v);
+                                    let arr1 = v[1].imageUrlStr.split(";");  // 98 & 89
+                                    let arr1h = v[29].imageUrlStr.split(";"); // 89 & 98
+                                    let arr2 = v[22].imageUrlStr.split(";");// 29 & 27
+                                    let arr2h = v[27].imageUrlStr.split(";");// 27 & 29
+                                    let arr3 = v[17].imageUrlStr.split(";");// 6 & 7
+                                    let arr3h = v[19].imageUrlStr.split(";");// 7 & 6
+                                    let arr4 = v[57].imageUrlStr.split(";"); //43 & 72
+                                    let arr4h = v[68].imageUrlStr.split(";"); //72 & 43
+                                    let arr5 = v[90].imageUrlStr.split(";"); //  18 & 40 
+                                    let arr5h = v[98].imageUrlStr.split(";"); //40 & 18
+                                    let arr6 = v[60].imageUrlStr.split(";"); // 64 & 65
+                                    let arr6h = v[66].imageUrlStr.split(";"); // 65 & 64
+                                    document.getElementById("cndlfrgimg1").src = arr1[2];
+                                    document.getElementById("cndlfrgimg1h").src = arr1h[2];
+                                    document.getElementById("cndlfrgimg2").src = arr2[2];
+                                    document.getElementById("cndlfrgimg2h").src = arr2h[2];
+                                    document.getElementById("cndlfrgimg3").src = arr3[2];
+                                    document.getElementById("cndlfrgimg3h").src = arr3h[2];
+                                    document.getElementById("cndlfrgimg4").src = arr4[2];
+                                    document.getElementById("cndlfrgimg4h").src = arr4h[2];
+                                    document.getElementById("cndlfrgimg5").src = arr5[2];
+                                    document.getElementById("cndlfrgimg5h").src = arr5h[2];
+                                    document.getElementById("cndlfrgimg6").src = arr6[2];
+                                    document.getElementById("cndlfrgimg6h").src = arr6h[2];
+                                }
+
+                                var oReq = new XMLHttpRequest();
+                                oReq.addEventListener("load", reqListener8);
+                                oReq.open("GET", "http://101.53.137.41/api/?cat=HomeDecor_TableDecor-Handicrafts_TableDecor_Showpieces&count=100&offset=0;");
+                                oReq.send();
+
+                            }
+
+                        </script>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- ##### Single Widget ##### -->
+            <div class="widget brands mb-50">
+                <!-- Widget Title -->
+                <h6 class="widget-title mb-30">Brands</h6>
+
+                <div class="widget-desc">
+                    <!-- Single Form Check -->
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="amado">
+                        <label class="form-check-label" for="amado">Amado</label>
+                    </div>
+                    <!-- Single Form Check -->
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="ikea">
+                        <label class="form-check-label" for="ikea">Ikea</label>
+                    </div>
+                    <!-- Single Form Check -->
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="furniture">
+                        <label class="form-check-label" for="furniture">Furniture Inc</label>
+                    </div>
+                    <!-- Single Form Check -->
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="factory">
+                        <label class="form-check-label" for="factory">The factory</label>
+                    </div>
+                    <!-- Single Form Check -->
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="artdeco">
+                        <label class="form-check-label" for="artdeco">Artdeco</label>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ##### Single Widget ##### -->
+            <div class="widget color mb-50">
+                <!-- Widget Title -->
+                <h6 class="widget-title mb-30">Color</h6>
+
+                <div class="widget-desc">
+                    <ul class="d-flex">
+                        <li>
+                            <a href="#" class="color1"></a>
+                        </li>
+                        <li>
+                            <a href="#" class="color2"></a>
+                        </li>
+                        <li>
+                            <a href="#" class="color3"></a>
+                        </li>
+                        <li>
+                            <a href="#" class="color4"></a>
+                        </li>
+                        <li>
+                            <a href="#" class="color5"></a>
+                        </li>
+                        <li>
+                            <a href="#" class="color6"></a>
+                        </li>
+                        <li>
+                            <a href="#" class="color7"></a>
+                        </li>
+                        <li>
+                            <a href="#" class="color8"></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- ##### Single Widget ##### -->
+            <div class="widget price mb-50">
+                <!-- Widget Title -->
+                <h6 class="widget-title mb-30">Price</h6>
+
+                <div class="widget-desc">
+                    <div class="slider-range">
+                        <div data-min="10" data-max="1000" data-unit="$" class="slider-range-price ui-slider ui-slider-horizontal ui-widget ui-widget-content ui-corner-all"
+                            data-value-min="10" data-value-max="1000" data-label-result="">
+                            <div class="ui-slider-range ui-widget-header ui-corner-all"></div>
+                            <span class="ui-slider-handle ui-state-default ui-corner-all" tabindex="0"></span>
+                            <span class="ui-slider-handle ui-state-default ui-corner-all" tabindex="0"></span>
+                        </div>
+                        <div class="range-price">$10 - $1000</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="amado_product_area section-padding-100">
+            <div class="container-fluid">
+
+                <div class="row">
+                    <div class="col-12">
+                        <div class="product-topbar d-xl-flex align-items-end justify-content-between">
+                            <!-- Total Products -->
+                            <div class="total-products">
+                                <p>Showing 1-8 0f 25</p>
+                                <div class="view d-flex">
+                                    <a href="#">
+                                        <i class="fa fa-th-large" aria-hidden="true"></i>
+                                    </a>
+                                    <a href="#">
+                                        <i class="fa fa-bars" aria-hidden="true"></i>
+                                    </a>
+                                </div>
+                            </div>
+                            <!-- Sorting -->
+                            <div class="product-sorting d-flex">
+                                <div class="sort-by-date d-flex align-items-center mr-15">
+                                    <p>Sort by</p>
+                                    <form action="#" method="get">
+                                        <select name="select" id="sortBydate">
+                                            <option value="value">Date</option>
+                                            <option value="value">Newest</option>
+                                            <option value="value">Popular</option>
+                                        </select>
+                                    </form>
+                                </div>
+                                <div class="view-product d-flex align-items-center">
+                                    <p>View</p>
+                                    <form action="#" method="get">
+                                        <select name="select" id="viewProduct">
+                                            <option value="value">12</option>
+                                            <option value="value">24</option>
+                                            <option value="value">48</option>
+                                            <option value="value">96</option>
+                                        </select>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+
+                    <!-- Single Product Area -->
+                    <div class="col-12 col-sm-6 col-md-12 col-xl-6">
+                        <div class="single-product-wrapper">
+                            <!-- Product Image -->
+                            <div class="product-img">
+                                <!-- <img id="cndlfrgimg" src="img/product-img/product1.jpg" alt=""> -->
+                                <img id="cndlfrgimg1" src="img/product-img/product1.jpg" alt="">
+                                <!-- Hover Thumb -->
+                                <img class="hover-img" id="cndlfrgimg1h" src="img/product-img/product2.jpg" alt="">
+                            </div>
+
+                            <!-- Product Description -->
+                            <div class="product-description d-flex align-items-center justify-content-between">
+                                <!-- Product Meta Data -->
+                                <div class="product-meta-data">
+                                    <div class="line"></div>
+                                    <p class="product-price">$
+                                        <span id="cndlfrgprice1">180</span>
+                                    </p>
+                                    <a href="product-details.html">
+                                        <h6 id="cndlfrgtit1">Modern Chair</h6>
+                                    </a>
+                                </div>
+                                <!-- Ratings & Cart -->
+                                <div class="ratings-cart text-right">
+                                    <div class="ratings">
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                    </div>
+                                    <div class="cart">
+                                        <a id="f1" onclick="clickCounter(id)" data-toggle="tooltip" data-placement="left" title="Add to Cart">
+                                            <img src="img/core-img/cart.png" alt="">
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Single Product Area -->
+                    <div class="col-12 col-sm-6 col-md-12 col-xl-6">
+                        <div class="single-product-wrapper">
+                            <!-- Product Image -->
+                            <div class="product-img">
+                                <img id="cndlfrgimg2" src="img/product-img/product2.jpg" alt="">
+                                <!-- Hover Thumb -->
+                                <img class="hover-img" id="cndlfrgimg2h" src="img/product-img/product3.jpg" alt="">
+                            </div>
+
+                            <!-- Product Description -->
+                            <div class="product-description d-flex align-items-center justify-content-between">
+                                <!-- Product Meta Data -->
+                                <div class="product-meta-data">
+                                    <div class="line"></div>
+                                    <p class="product-price">$
+                                        <span id="cndlfrgprice2">180</span>
+                                    </p>
+                                    <a href="product-details.html">
+                                        <h6 id="cndlfrgtit2">Modern Chair</h6>
+                                    </a>
+                                </div>
+                                <!-- Ratings & Cart -->
+                                <div class="ratings-cart text-right">
+                                    <div class="ratings">
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                    </div>
+                                    <div class="cart">
+                                        <a id="f2" onclick="clickCounter(id)" data-toggle="tooltip" data-placement="left" title="Add to Cart">
+                                            <img src="img/core-img/cart.png" alt="">
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Single Product Area -->
+                    <div class="col-12 col-sm-6 col-md-12 col-xl-6">
+                        <div class="single-product-wrapper">
+                            <!-- Product Image -->
+                            <div class="product-img">
+                                <img id="cndlfrgimg3" src="img/product-img/product3.jpg" alt="">
+                                <!-- Hover Thumb -->
+                                <img class="hover-img" id="cndlfrgimg3h" src="img/product-img/product4.jpg" alt="">
+                            </div>
+
+                            <!-- Product Description -->
+                            <div class="product-description d-flex align-items-center justify-content-between">
+                                <!-- Product Meta Data -->
+                                <div class="product-meta-data">
+                                    <div class="line"></div>
+                                    <p class="product-price">$
+                                        <span id="cndlfrgprice3">180</span>
+                                    </p>
+                                    <a href="product-details.html">
+                                        <h6 id="cndlfrgtit3">Modern Chair</h6>
+                                    </a>
+                                </div>
+                                <!-- Ratings & Cart -->
+                                <div class="ratings-cart text-right">
+                                    <div class="ratings">
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                    </div>
+                                    <div class="cart">
+                                        <a id="f3" onclick="clickCounter(id)" data-toggle="tooltip" data-placement="left" title="Add to Cart">
+                                            <img src="img/core-img/cart.png" alt="">
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Single Product Area -->
+                    <div class="col-12 col-sm-6 col-md-12 col-xl-6">
+                        <div class="single-product-wrapper">
+                            <!-- Product Image -->
+                            <div class="product-img">
+                                <img id="cndlfrgimg4" src="img/product-img/product4.jpg" alt="">
+                                <!-- Hover Thumb -->
+                                <img class="hover-img" id="cndlfrgimg4h" src="img/product-img/product5.jpg" alt="">
+                            </div>
+
+                            <!-- Product Description -->
+                            <div class="product-description d-flex align-items-center justify-content-between">
+                                <!-- Product Meta Data -->
+                                <div class="product-meta-data">
+                                    <div class="line"></div>
+                                    <p class="product-price">$
+                                        <span id="cndlfrgprice4">180</span>
+                                    </p>
+                                    <a href="product-details.html">
+                                        <h6 id="cndlfrgtit4">Modern Chair</h6>
+                                    </a>
+                                </div>
+                                <!-- Ratings & Cart -->
+                                <div class="ratings-cart text-right">
+                                    <div class="ratings">
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                    </div>
+                                    <div class="cart">
+                                        <a id="f4" onclick="clickCounter(id)" data-toggle="tooltip" data-placement="left" title="Add to Cart">
+                                            <img src="img/core-img/cart.png" alt="">
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Single Product Area -->
+                    <div class="col-12 col-sm-6 col-md-12 col-xl-6">
+                        <div class="single-product-wrapper">
+                            <!-- Product Image -->
+                            <div class="product-img">
+                                <img id="cndlfrgimg5" src="img/product-img/product5.jpg" alt="">
+                                <!-- Hover Thumb -->
+                                <img id="cndlfrgimg5h" class="hover-img" src="img/product-img/product6.jpg" alt="">
+                            </div>
+
+                            <!-- Product Description -->
+                            <div class="product-description d-flex align-items-center justify-content-between">
+                                <!-- Product Meta Data -->
+                                <div class="product-meta-data">
+                                    <div class="line"></div>
+                                    <p class="product-price">$
+                                        <span id="cndlfrgprice5">180</span>
+                                    </p>
+                                    <a href="product-details.html">
+                                        <h6 id="cndlfrgtit5">Modern Chair</h6>
+                                    </a>
+                                </div>
+                                <!-- Ratings & Cart -->
+                                <div class="ratings-cart text-right">
+                                    <div class="ratings">
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                    </div>
+                                    <div class="cart">
+                                        <a id="f5 " onclick="clickCounter(id)" data-toggle="tooltip" data-placement="left" title="Add to Cart">
+                                            <img src="img/core-img/cart.png" alt="">
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Single Product Area -->
+                    <div class="col-12 col-sm-6 col-md-12 col-xl-6">
+                        <div class="single-product-wrapper">
+                            <!-- Product Image -->
+                            <div class="product-img">
+                                <img id="cndlfrgimg6" src="img/product-img/product6.jpg" alt="">
+                                <!-- Hover Thumb -->
+                                <img class="hover-img" id="cndlfrgimg6h" src="img/product-img/product1.jpg" alt="">
+                            </div>
+
+                            <!-- Product Description -->
+                            <div class="product-description d-flex align-items-center justify-content-between">
+                                <!-- Product Meta Data -->
+                                <div class="product-meta-data">
+                                    <div class="line"></div>
+                                    <p class="product-price">$
+                                        <span id="cndlfrgprice6">180</span>
+                                    </p>
+                                    <a href="product-details.html">
+                                        <h6 id="cndlfrgtit6">Modern Chair</h6>
+                                    </a>
+                                </div>
+                                <!-- Ratings & Cart -->
+                                <div class="ratings-cart text-right">
+                                    <div class="ratings">
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                    </div>
+                                    <div class="cart">
+                                        <a id="f6 " onclick="clickCounter(id)" data-toggle="tooltip" data-placement="left" title="Add to Cart">
+                                            <img src="img/core-img/cart.png" alt="">
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-12">
+                        <!-- Pagination -->
+                        <nav aria-label="navigation">
+                            <ul class="pagination justify-content-end mt-50">
+                                <li class="page-item active">
+                                    <a class="page-link" href="#">01.</a>
+                                </li>
+                                <li class="page-item">
+                                    <a class="page-link" href="#">02.</a>
+                                </li>
+                                <li class="page-item">
+                                    <a class="page-link" href="#">03.</a>
+                                </li>
+                                <li class="page-item">
+                                    <a class="page-link" href="#">04.</a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- ##### Main Content Wrapper End ##### -->
+
+    <!-- Single Catagory 
+                <div class="single-products-catagory clearfix">
+                    <a href="shop.html">
+                        <img id="clkwallimg" src="img/bg-img/9.jpg" alt="">
+                        <!-- Hover Content 
+                        <div class="hover-content">
+                            <div class="line"></div>
+                            <p>From $
+                                <span id="clkwallprice">180</span>
+                            </p>
+                            <h4 id="clkwalltit">Modern Chair</h4>
+                        </div>
+                    </a>
+                </div>-->
+    </div>
+    </div>
+    <!-- Product Catagories Area End -->
+    </div>
+    <!-- ##### Main Content Wrapper End ##### -->
+
+    <!-- ##### Newsletter Area Start ##### -->
+    <section class="newsletter-area section-padding-100-0">
+        <div class="container">
+            <div class="row align-items-center">
+                <!-- Newsletter Text -->
+                <div class="col-12 col-lg-6 col-xl-7">
+                    <div class="newsletter-text mb-100">
+                        <h2>Subscribe for a
+                            <span>25% flat Discount</span>
+                        </h2>
+                        <p>Get notified by us on new upcommings! </p>
+                    </div>
+                </div>
+                <!-- Newsletter Form -->
+                <div class="col-12 col-lg-6 col-xl-5">
+                    <div class="newsletter-form mb-100">
+                        <form action="#" method="post">
+                            <input type="email" name="email" class="nl-email" placeholder="Your E-mail">
+                            <input type="submit" value="Subscribe">
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ##### Newsletter Area End ##### -->
+
+    <!-- ##### Footer Area Start ##### -->
+    <footer class="footer_area clearfix">
+        <div class="container">
+            <div class="row align-items-center">
+                Single Widget Area
+                <div class="col-12 col-lg-4">
+                    <div class="single_widget_area">
+                        <!-- Copywrite Text -->
+                        <center>
+                            <p class="copywrite" style="font-size:20px!;">
+                                Copyright &copy;
+                                <script>document.write(new Date().getFullYear());</script> All rights reserved | Made with
+                                <i class="fa fa-heart-o" aria-hidden="true"></i> by
+                                <a href="#" target="_blank">Harshit</a>
+                                <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                            </p>
+                        </center>
+
+                    </div>
+                </div>
+                <!-- Single Widget Area -->
+            </div>
+        </div>
+    </footer>
+    <!-- ##### Footer Area End ##### -->
+
+    <!-- ##### jQuery (Necessary for All JavaScript Plugins) ##### -->
+    <script src="js/jquery/jquery-2.2.4.min.js"></script>
+    <!-- Popper js -->
+    <script src="js/popper.min.js"></script>
+    <!-- Bootstrap js -->
+    <script src="js/bootstrap.min.js"></script>
+    <!-- Plugins js -->
+    <script src="js/plugins.js"></script>
+    <!-- Active js -->
+    <script src="js/active.js"></script>
+    <script>
+        var which = 1;
+        function clickCounter(id) {
+            if (typeof (Storage) !== "undefined") {
+                if (localStorage.clickcount) {
+                    localStorage.clickcount = Number(localStorage.clickcount) + 1;
+                } else {
+                    localStorage.clickcount = 1;
+                }
+                document.getElementById("cart").innerHTML = localStorage.clickcount;
+
+                localStorage.setItem(id, which);
+            }
+        }
+        function incr(f) {
+            which = f;
+        }
+    </script>
+</body>
+
+</html>

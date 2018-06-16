@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+       /* Set the size of the div element that contains the map */
+      #map {
+        height: 400px;  /* The height is 400 pixels */
+        width: 100%;  /* The width is the width of the web page */
+       }
+    </style>
+  </head>
+  <body>
+ 
+    <!--The div element for the map -->
+    <button  onclick="getStatus()" class="btn btn-danger" >warehouse Near You</button>
+    <div id="map"></div>
+    
+    <script>
+// Initialize and add the map
+var uluru = {lat: 18.5362, lng: 73.8940};
+
+function getStatus()
+{
+          
+             initMap1();
+}
+function initMap1()
+{
+  var locations = [
+      ['Flipkart warehouse', 18.4836149,73.7889639 , 2],
+      ['Your location',18.5362,  73.8940, 1],
+     
+    ];
+
+    var map = new google.maps.Map(document.getElementById('map'), {
+      zoom: 10,
+      center: new google.maps.LatLng( 18.5362,73.8940 ),
+      mapTypeId: google.maps.MapTypeId.ROADMAP
+    });
+
+    var infowindow = new google.maps.InfoWindow();
+
+    var marker, i;
+
+    for (i = 0; i < locations.length; i++) {  
+      marker = new google.maps.Marker({
+        position: new google.maps.LatLng(locations[i][1], locations[i][2]),
+        map: map
+      });
+if(i==0)
+  marker.setAnimation(google.maps.Animation.BOUNCE);
+      google.maps.event.addListener(marker, 'click', (function(marker, i) {
+        return function() {
+          infowindow.setContent(locations[i][0]);
+          infowindow.open(map, marker);
+        }
+      })(marker, i));
+    }
+}
+function initMap() {
+  // The location of Uluru
+ 
+  // The map, centered at Uluru
+  var map = new google.maps.Map(
+      document.getElementById('map'), {zoom: 16, center: uluru});
+  // The marker, positioned at Uluru
+  var marker = new google.maps.Marker({position: uluru, map: map});
+  marker.setAnimation(google.maps.Animation.BOUNCE);
+}
+    </script>
+    <!--Load the API from the specified URL
+    * The async attribute allows the browser to render the page while the API loads
+    * The key parameter will contain your own API key (which is not needed for this tutorial)
+    * The callback parameter executes the initMap() function
+    -->
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA1uWuLS54NEyveTG8d60Rjwpv1TKEA6II&callback=initMap">
+    </script>
+  </body>
+</html>
