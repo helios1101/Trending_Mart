@@ -1,6 +1,6 @@
 E-Shopping Cart Application On React
 =================
-[![Bootstrapped With](https://img.shields.io/badge/bootstrapped%20with-create%20react%20app-blue.svg)](https://github.com/facebookincubator/create-react-app) [![Code Style](https://img.shields.io/badge/code%20style-airbnb-brightgreen.svg)](https://github.com/airbnb/javascript) [![Open Source](https://badges.frapsoft.com/os/v1/open-source.png?v=103)](https://github.com/appticles/pwa-theme-woocommerce)
+[![Bootstrapped With](https://img.shields.io/badge/bootstrapped%20with-create%20react%20app-blue.svg)](https://github.com/facebookincubator/create-react-app) [![Code Style](https://img.shields.io/badge/code%20style-airbnb-brightgreen.svg)](https://github.com/airbnb/javascript) [![Open Source](https://badges.frapsoft.com/os/v1/open-source.png?v=103)](https://github.com)
 
 An application based on shopping site that uses API to get data and images, also with checkout and add to cart option. 
 
