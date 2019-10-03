@@ -229,7 +229,7 @@ Next you might want to integrate Prettier in your favorite editor. Read the sect
 ## LICENCE DECLARATION
 This licence is Updated under <a href="https://opensource.org/licenses/MIT">MIT LICENCE</a> 
 
-
+update readme.md
 
 
 
